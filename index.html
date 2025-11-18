@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Actividad 1 - Subjuntivo (Finalidad)</title>
+<style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin:auto; }
+    .pregunta-container { display: none; }
+    .pregunta { font-size: 20px; margin-bottom: 20px; }
+    .opcion { margin: 10px 0; }
+    button {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    #final { display: none; font-size: 22px; font-weight: bold; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<h2>Actividad 1 — Subjuntivo (Finalidad)</h2>
+<p>Selecciona la opción correcta para completar las oraciones.</p>
+
+<!-- Pregunta 1 -->
+<div id="p1" class="pregunta-container">
+    <div class="pregunta">1. Estudio español __________ poder comunicarme con mis compañeros.</div>
+    <div class="opcion"><input type="radio" name="q1" value="correcta"> para que</div>
+    <div class="opcion"><input type="radio" name="q1" value="incorrecta"> con el propósito de que</div>
+    <div class="opcion"><input type="radio" name="q1" value="incorrecta"> a fin de que</div>
+    <button onclick="siguiente(1)">Siguiente</button>
+</div>
+
+<!-- Pregunta 2 -->
+<div id="p2" class="pregunta-container">
+    <div class="pregunta">2. Te llamo __________ sepas que llegué bien.</div>
+    <div class="opcion"><input type="radio" name="q2" value="incorrecta"> con la intención de que</div>
+    <div class="opcion"><input type="radio" name="q2" value="correcta"> para que</div>
+    <div class="opcion"><input type="radio" name="q2" value="incorrecta"> a fin de</div>
+    <button onclick="siguiente(2)">Siguiente</button>
+</div>
+
+<!-- Pregunta 3 -->
+<div id="p3" class="pregunta-container">
+    <div class="pregunta">3. Cerré la ventana __________ no entrara el frío.</div>
+    <div class="opcion"><input type="radio" name="q3" value="correcta"> para que</div>
+    <div class="opcion"><input type="radio" name="q3" value="incorrecta"> a fin de que</div>
+    <div class="opcion"><input type="radio" name="q3" value="incorrecta"> con el fin de que</div>
+    <button onclick="siguiente(3)">Siguiente</button>
+</div>
+
+<!-- Pregunta 4 -->
+<div id="p4" class="pregunta-container">
+    <div class="pregunta">4. Trabaja horas extra __________ su jefe esté satisfecho.</div>
+    <div class="opcion"><input type="radio" name="q4" value="incorrecta"> con el propósito de que</div>
+    <div class="opcion"><input type="radio" name="q4" value="incorrecta"> a fin de que</div>
+    <div class="opcion"><input type="radio" name="q4" value="correcta"> para que</div>
+    <button onclick="siguiente(4)">Siguiente</button>
+</div>
+
+<!-- Pregunta 5 -->
+<div id="p5" class="pregunta-container">
+    <div class="pregunta">5. Dejó una nota __________ su familia entendiera la situación.</div>
+    <div class="opcion"><input type="radio" name="q5" value="incorrecta"> para que</div>
+    <div class="opcion"><input type="radio" name="q5" value="correcta"> con la intención de que</div>
+    <div class="opcion"><input type="radio" name="q5" value="incorrecta"> a fin de que</div>
+    <button onclick="terminar()">Terminar</button>
+</div>
+
+<div id="final"></div>
+
+<script>
+let correctas = 0;
+
+document.getElementById("p1").style.display = "block";
+
+function siguiente(num) {
+    let opciones = document.getElementsByName("q" + num);
+    let seleccionada = false;
+
+    for (let o of opciones) {
+        if (o.checked) {
+            seleccionada = true;
+            if (o.value === "correcta") correctas++;
+            break;
+        }
+    }
+
+    if (!seleccionada) {
+        alert("Debes elegir una opción antes de continuar.");
+        return;
+    }
+
+    document.getElementById("p" + num).style.display = "none";
+    document.getElementById("p" + (num + 1)).style.display = "block";
+}
+
+function terminar() {
+    let opciones = document.getElementsByName("q5");
+    let seleccionada = false;
+
+    for (let o of opciones) {
+        if (o.checked) {
+            seleccionada = true;
+            if (o.value === "correcta") correctas++;
+            break;
+        }
+    }
+
+    if (!seleccionada) {
+        alert("Debes elegir una opción antes de terminar.");
+        return;
+    }
+
+    document.getElementById("p5").style.display = "none";
+
+    document.getElementById("final").style.display = "block";
+    document.getElementById("final").innerHTML = 
+        "🎉 ¡Actividad completada!<br>Respuestas correctas: " + correctas + " de 5.";
+}
+</script>
+
+</body>
+</html>
