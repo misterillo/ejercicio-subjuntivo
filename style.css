@@ -1,0 +1,73 @@
+
+body { 
+    font-family: Arial; padding: 20px; max-width: 600px; margin:auto;
+}
+.titulo {
+    color: #007bff;
+}
+.pregunta-container {
+    display: none; 
+}
+
+.pregunta { 
+    font-size: 20px; margin-bottom: 20px; 
+}
+
+.opcion { 
+    margin: 10px 0;
+    
+}
+
+.opcion input[type="radio"] {
+    display: none; /* Oculta el circulito */
+}
+
+.opcion label {
+    display: block;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f8f8f8;
+}
+
+/* Cuando está seleccionada */
+.opcion input[type="radio"]:checked + label {
+    border-color: #007bff;
+    background: #e6f0ff;
+    font-weight: bold;
+}
+
+.opcion:hover {
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#final { 
+    display: none; 
+    font-size: 22px; 
+    font-weight: bold; 
+    margin-top: 40px; 
+    color: #007bff;
+}
+
+.h2 {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}

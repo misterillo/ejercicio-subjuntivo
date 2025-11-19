@@ -3,67 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <title>Actividad 1 - Subjuntivo (Finalidad)</title>
-<style>
-    body { font-family: Arial; padding: 20px; max-width: 600px; margin:auto; }
-    .pregunta-container { display: none; }
-    .pregunta { font-size: 20px; margin-bottom: 20px; }
-    .opcion { margin: 10px 0; }
-    button {
-        padding: 10px 15px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-    #final { display: none; font-size: 22px; font-weight: bold; margin-top: 40px; }
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<h2>Actividad 1 — Subjuntivo (Finalidad)</h2>
+<h2 class="titulo">Actividad 1 — Subjuntivo (Finalidad)</h2>
 <p>Selecciona la opción correcta para completar las oraciones.</p>
 
 <!-- Pregunta 1 -->
 <div id="p1" class="pregunta-container">
-    <div class="pregunta">1. Estudio español __________ poder comunicarme con mis compañeros.</div>
-    <div class="opcion"><input type="radio" name="q1" value="correcta"> para que</div>
-    <div class="opcion"><input type="radio" name="q1" value="incorrecta"> con el propósito de que</div>
-    <div class="opcion"><input type="radio" name="q1" value="incorrecta"> a fin de que</div>
+    <div class="pregunta">1. En muchos países se utiliza el viento con el objetivo de__________ energía.</div>
+
+    <div class="opcion">
+        <input type="radio" id="q1a" name="q1" value="correcta">
+        <label for="q1a">producir</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q1b" name="q1" value="incorrecta">
+        <label for="q1b">que se produzca</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q1c" name="q1" value="incorrecta">
+        <label for="q1c">que se produce</label>
+    </div>
+
     <button onclick="siguiente(1)">Siguiente</button>
 </div>
 
+
 <!-- Pregunta 2 -->
 <div id="p2" class="pregunta-container">
-    <div class="pregunta">2. Te llamo __________ sepas que llegué bien.</div>
-    <div class="opcion"><input type="radio" name="q2" value="incorrecta"> con la intención de que</div>
-    <div class="opcion"><input type="radio" name="q2" value="correcta"> para que</div>
-    <div class="opcion"><input type="radio" name="q2" value="incorrecta"> a fin de</div>
+    <div class="pregunta">2. El jefe reune a todos los empleados con el fin de _________ las nuevas medidas.</div>
+
+    <div class="opcion">
+        <input type="radio" id="q2a" name="q2" value="incorrecta">
+        <label for="q2a">que conocieron</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q2b" name="q2" value="correcta">
+        <label for="q2b">que conozcan</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q2c" name="q2" value="incorrecta">
+        <label for="q2c">conocerse</label>
+    </div>
+
     <button onclick="siguiente(2)">Siguiente</button>
 </div>
 
+
 <!-- Pregunta 3 -->
+
 <div id="p3" class="pregunta-container">
-    <div class="pregunta">3. Cerré la ventana __________ no entrara el frío.</div>
-    <div class="opcion"><input type="radio" name="q3" value="correcta"> para que</div>
-    <div class="opcion"><input type="radio" name="q3" value="incorrecta"> a fin de que</div>
-    <div class="opcion"><input type="radio" name="q3" value="incorrecta"> con el fin de que</div>
+    <div class="pregunta">3. Vamos a dejar las ventanas abietas para _______ un poco de aire.</div>
+    <div class="opcion">
+        <input type="radio" id="q3a" name="q3" value="correcta">
+        <label for="q3a">que entre</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q3b" name="q3" value="incorrecta">
+        <label for="q3b">entrar</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q3c" name="q3" value="incorrecta">
+        <label for="q3c">que entra</label>
+    </div>
     <button onclick="siguiente(3)">Siguiente</button>
 </div>
 
 <!-- Pregunta 4 -->
 <div id="p4" class="pregunta-container">
-    <div class="pregunta">4. Trabaja horas extra __________ su jefe esté satisfecho.</div>
-    <div class="opcion"><input type="radio" name="q4" value="incorrecta"> con el propósito de que</div>
-    <div class="opcion"><input type="radio" name="q4" value="incorrecta"> a fin de que</div>
-    <div class="opcion"><input type="radio" name="q4" value="correcta"> para que</div>
+    <div class="pregunta">4. Cerraron el paso en la avenida con la finalidad de ____________ el pavimento.</div>
+    <div class="opcion">
+        <input type="radio" id="q4a" name="q4" value="incorrecta">
+        <label for="q4a">que reparar</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q4b" name="q4" value="incorrecta">
+        <label for="q4b">que se reparo</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q4c" name="q4" value="correcta">
+        <label for="q4c">reparar</label>
+    </div>
     <button onclick="siguiente(4)">Siguiente</button>
 </div>
 
 <!-- Pregunta 5 -->
 <div id="p5" class="pregunta-container">
-    <div class="pregunta">5. Dejó una nota __________ su familia entendiera la situación.</div>
-    <div class="opcion"><input type="radio" name="q5" value="incorrecta"> para que</div>
-    <div class="opcion"><input type="radio" name="q5" value="correcta"> con la intención de que</div>
-    <div class="opcion"><input type="radio" name="q5" value="incorrecta"> a fin de que</div>
+    <div class="pregunta">5. Quiero explicarte la situación para que después no ________ malentendidos.</div>
+    <div class="opcion">
+        <input type="radio" id="q5a" name="q5" value="incorrecta">
+        <label for="q5a">hay</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q5b" name="q5" value="correcta">
+        <label for="q5b">haya</label>
+    </div>
+
+    <div class="opcion">
+        <input type="radio" id="q5c" name="q5" value="incorrecta">
+        <label for="q5c">haber</label>
+    </div>
     <button onclick="terminar()">Terminar</button>
 </div>
 
